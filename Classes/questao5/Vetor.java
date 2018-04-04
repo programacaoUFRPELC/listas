@@ -4,10 +4,12 @@ public class Vetor {
 
 	private String[] vetor;
 	private int index;
+	private int size;
 	
 	public Vetor(int s) {
 		this.vetor = new String[s];
 		this.index = 0;
+		this.size = s;
 	}
 	
 	public void insert(String s) {
@@ -26,6 +28,14 @@ public class Vetor {
 		}
 	}
 	
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+
 	public String get(int n) {
 		String s = null;
 		if (n < this.vetor.length && this.vetor[n] != null) {
